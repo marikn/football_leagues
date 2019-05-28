@@ -1,0 +1,26 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 13
+
+    role_hierarchy:
+        ROLE_USER: ROLE_USER
+
+    providers:
+        jwt_user_provider:
+            id: App\Security\JwtUserProvider
+
+    firewalls:
+        jwt:
+            pattern: ^/api
+            stateless: true
+            guard:
+                authenticator: App\Security\JwtUserAuthenticator
+            provider: jwt_user_provider
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/api, roles: ROLE_USER }

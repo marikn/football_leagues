@@ -1,0 +1,9 @@
+home:
+    path: /
+    methods: [GET]
+    controller: App\Controller\HomeController::home
+
+login:
+    path: /login
+    methods: [POST]
+    controller: App\Controller\LoginController::login

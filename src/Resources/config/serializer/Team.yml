@@ -1,0 +1,13 @@
+App\Entity\Team:
+  exclusion_policy: ALL
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    strip:
+      type: string
+  virtual_properties:
+    getLeagueId:
+      name: league_id
+      type: integer

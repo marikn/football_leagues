@@ -1,0 +1,9 @@
+App\Entity\League:
+  exclusion_policy: ALL
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    teams:
+      type: App\Entity\Team

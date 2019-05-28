@@ -1,0 +1,14 @@
+jms_serializer:
+  visitors:
+    xml_serialization:
+      format_output: '%kernel.debug%'
+  metadata:
+    cache: file
+    debug: "%kernel.debug%"
+    file_cache:
+      dir: "%kernel.cache_dir%/serializer"
+    auto_detection: false
+    directories:
+      app:
+        namespace_prefix: "App\\Entity"
+        path: "%kernel.root_dir%/Resources/config/serializer"
