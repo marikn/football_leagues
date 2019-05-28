@@ -1,4 +1,4 @@
-#REST API for football teams management
+# REST API for football teams management
 
 Installation
 ------------
